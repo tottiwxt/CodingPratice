@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class GetUglyNumber_Solution {
 
@@ -43,7 +45,13 @@ public class GetUglyNumber_Solution {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(GetUglyNumber_Solution(0));
+		Scanner in = new Scanner(System.in);
+        while (in.hasNextInt()) {//注意while处理多个case
+        	System.out.println(GetUglyNumber_Solution(in.nextInt()));
+        	
+        		
+        }
+		
 	}
 
 }

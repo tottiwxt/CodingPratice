@@ -10,8 +10,9 @@ import java.lang.reflect.Method;
 		Parent parent =  new Child();
 		parent.method();
 		parent.staticMethod();
-		Child child = (Child) new Parent();
+		Child child = (Child) new Child();
 		child.method();
+		child.staticMethod();
 		
 //		child c = (child) new Parent();
 //		c.Method1();
