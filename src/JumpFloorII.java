@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class JumpFloorII {
 
@@ -8,5 +11,14 @@ public class JumpFloorII {
 		// TODO Auto-generated method stub
 
 	}
-
+	 public int JumpFloorII(int target) {
+	     if(target = 1)
+	    	 return 1;
+	     else {
+	    	 String string = null;
+	    	 Map map = new HashMap<Integer, Integer>();
+	     }
+		 
+		 return 0;
+	    }
 }
