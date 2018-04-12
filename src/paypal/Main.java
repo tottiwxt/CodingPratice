@@ -15,17 +15,21 @@ public class Main {
         	int Target = in.nextInt();
         	int position =  0;
         	int count = 0;
+      
         	if(Target > 0)
         		position++;
         	else if(Target < 0)
         		position--;
         	count++;
-        	if(Target>0){
+          	if(Target == 0 ){
+        		System.out.println(0);
+        	}
+          	else if(Target>0){
         		while(position*2<=Target){
         			count++;
         			position = position * 2;
         		}
-        		System.out.println(count+Target-position);
+        		//if(Target-position)
         	}
         	else if(Target<0){
         		while(position*2>=Target){
