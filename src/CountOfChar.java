@@ -9,9 +9,7 @@ import java.util.Scanner;
 
 public class CountOfChar {
 
-	/**
-	 * @param args
-	 */
+	
 	static class  CharCount{
 		int count = 0;
 		char ch ;
@@ -33,8 +31,6 @@ public class CountOfChar {
 			Arrays.sort(res, new Comparator<CharCount>() {
 				@Override
 				public int compare(CharCount o1, CharCount o2) {
-					// TODO Auto-generated method stub
-					
 					return o2.count-o1.count>0?o2.count-o1.count:o1.ch>o2.ch?1:-1;
 				}
 			});
