@@ -16,31 +16,55 @@ public class PrintFromTopToBottom {
 
 	}
 	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<TreeNode>() ;
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        TreeNode tmp = null;
-        if(root == null) return null;
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		Queue<TreeNode> queue = new LinkedList<TreeNode>();
 		queue.add(root);
-		
-	
 		while(!queue.isEmpty()){
-			list.add(root.val);
-			tmp = queue.remove();;
+			TreeNode tmpNode = queue.remove();
+			res.add(tmpNode.val);
 			
-			
-			if(tmp.left!=null){
-				queue.add(tmp.left);
-				
-			}
-			if(tmp.left!=null){
-			
-				queue.add(tmp.right);
-				
-			}
-			
+			if(tmpNode.left!=null)
+				queue.add(root.left);
+			if(tmpNode.right!=null)
+				queue.add(root.right);
 		}
 		
 		
-		return list;
-    }
+		return res;
+	}
+	
+	
+	
+	
+	
+	
+	
+//	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+//        Queue<TreeNode> queue = new LinkedList<TreeNode>() ;
+//        ArrayList<Integer> list = new ArrayList<Integer>();
+//        TreeNode tmp = null;
+//        if(root == null) return null;
+//		queue.add(root);
+//		
+//	
+//		while(!queue.isEmpty()){
+//			list.add(root.val);
+//			tmp = queue.remove();;
+//			
+//			
+//			if(tmp.left!=null){
+//				queue.add(tmp.left);
+//				
+//			}
+//			if(tmp.left!=null){
+//			
+//				queue.add(tmp.right);
+//				
+//			}
+//			
+//		}
+//		
+//		
+//		return list;
+//    }
 }
