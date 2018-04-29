@@ -32,6 +32,7 @@ public class Main {
 
 	private static long DP(int category, int count, int[][] candy, int index) {
 		// TODO Auto-generated method stub
+		if(count<0) return 0;
 		int min = candy[index][0];
 		int max = candy[index][1];
 		if(min>count)
@@ -45,7 +46,8 @@ public class Main {
 			}
 		}
 		for(int i = min;i<=max;i++)
-			res += DP(category-1, count-i, candy, index+1);
+			if(count-i>0)
+				res += DP(category-1, count-i, candy, index+1);
 		
 		return res;
 	}
