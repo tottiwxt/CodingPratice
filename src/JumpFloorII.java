@@ -12,7 +12,7 @@ public class JumpFloorII {
 
 	}
 	 public int JumpFloorII(int target) {
-	     if(target = 1)
+	     if(target == 1)
 	    	 return 1;
 	     else {
 	    	 String string = null;

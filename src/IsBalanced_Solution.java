@@ -1,4 +1,3 @@
-import TreeDepth.TreeNode;
 
 
 public class IsBalanced_Solution {
