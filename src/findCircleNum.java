@@ -4,7 +4,7 @@
 public class findCircleNum {
 	
 	
-	/* ·¨1   dfs
+	/* ï¿½ï¿½1   dfs
 	public int findCircleNum(int[][] M) {
 		int count = 0;
 		int n = M[0].length;
@@ -30,7 +30,7 @@ public class findCircleNum {
 	}
 	*/
 	
-	// ·¨2£º ²¢²é¼¯
+	// ï¿½ï¿½2ï¿½ï¿½ ï¿½ï¿½ï¿½é¼¯
 	public int findCircleNum(int[][] M) {
 		int count = 0;
 		int n = M[0].length;

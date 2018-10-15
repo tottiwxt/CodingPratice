@@ -1,101 +1,66 @@
 package meituan;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.util.*;
+class Test {
+}
+public class Main
+{
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner  = new Scanner(System.in);
+        while(scanner.hasNext()){
+          int n = scanner.nextInt();
+          int X = scanner.nextInt();
+          ArrayList<Integer> al = new ArrayList<>();
+          for(int i = 0;i<n;i++){
+              al.add(scanner.nextInt());
+          }
+            al.sort(new Comparator<Integer>() {
+                @Override
+                public int compare(Integer o1, Integer o2) {
+                    int i = o1 > o2 ? 1 : -1;
+                    return i;
+                }
+            });
+          int min = 100000;
+          int index  = -1;
+          for(int i = 0 ;i<n;i++){
+                if(al.get(i)>=X){
+                    min  = al.get(i);
+                    index = i;
+                    break;
+                }
+          }
+          int minSum = 0;
 
-import java.util.Scanner;
+              int left = 0 ;
+              int right = 0;
+              for(int i = 0 ; i<n;i++){
+                  minSum+=al.get(i);
+                  right++;
+                  int tmpSum = minSum;
+                  if(minSum>=X){
+                      //大于X了
+                      //开始优化
+                      right --;
+                      {
+                          for(;right>=0;right--){
+                              int minus = al.get(right);
+                              if(minSum-minus>=X){
+                                  minSum -= minus;
+                              }
+                          }
+                      }
+                      break;
+                  }
+              }
 
-public class Main {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner scanner  = new Scanner(System.in);
-		while(scanner.hasNext()){
-			int n = scanner.nextInt();
-			for(int i = 0;i<n;i++){
-				int num = scanner.nextInt();
-				System.out.println(Length(num));
-			}
-		}
-	}
+            System.out.println(minSum<min?minSum:min);
 
-	private static long Length(int num) {
-		// TODO Auto-generated method stub
-//		if(num<10)
-//			return num;
-		int tmp = num;
-		int bit = 0;
-		while(tmp!=0){
-			tmp /= 10;
-			bit++;
-		}
-		long count = 0;
-		
-//		 count += bit*(num-small+1);
-//		 if(small>=10)
-//			  count += Length(small-1);
-//		return count;
-		 while(bit>0){
-			 	int small = 1;
-				for(int i = 0;i<bit-1;i++){
-					small *= 10;
-				}
-				count += bit*(num-small+1);
-				num = small -1;
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				bit -= 1;
-		 }
-		 return count;
-	}
-
+        }
+    }
 
 
 }

@@ -29,15 +29,24 @@ public class Synchronized implements Runnable {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*final Synchronized t = new Synchronized();  
-		 Thread t1 = new Thread(  new Runnable() {  public void run() {  t.fun1();  }  }, "t1"  );  
-         Thread t2 = new Thread(  new Runnable() {  public void run() { t.fun2();   }  }, "t2"  );  
-          t1.start();  
-          t2.start();  
-	*/
-		System.out.println(Runtime.getRuntime().maxMemory());
-		System.out.println(Runtime.getRuntime().freeMemory());
-		System.out.println(Runtime.getRuntime().totalMemory());
+//		final Synchronized t = new Synchronized();
+//		final Synchronized ts = new Synchronized();
+//
+//		 Thread t1 = new Thread(  new Runnable() {  public void run() {  t.fun2();  }  }, "t1"  );
+//         Thread t2 = new Thread(  new Runnable() {  public void run() { t.fun2();   }  }, "t2"  );
+//          t1.start();
+//          t2.start();
+////
+//		System.out.println(Runtime.getRuntime().maxMemory());
+//		System.out.println(Runtime.getRuntime().freeMemory());
+//		System.out.println(Runtime.getRuntime().totalMemory());
+
+		for (int i = 0; i < 5; i++) {
+
+				Thread th = new MyThread();
+				th.start();
+			}
 		}
+
      
 }

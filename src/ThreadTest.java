@@ -1,4 +1,3 @@
-import org.junit.Test;
 
 
  class ThreadTest1 extends Thread {
